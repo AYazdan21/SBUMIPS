@@ -194,8 +194,8 @@ This project is open-source and available for educational purposes.
 
 ## Authors
 
-Amirreza Yazdanpanah
-Iman Babajani
+Amirreza Yazdanpanah \n
+Iman Babajani \n
 Mahdi Karimi
 
 ## Acknowledgments
