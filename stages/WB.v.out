@@ -1,0 +1,43 @@
+#! /c/Source/iverilog-install/bin/vvp
+:ivl_version "12.0 (devel)" "(s20150603-1539-g2693dd32b)";
+:ivl_delay_selection "TYPICAL";
+:vpi_time_precision + 0;
+:vpi_module "C:\iverilog\lib\ivl\system.vpi";
+:vpi_module "C:\iverilog\lib\ivl\vhdl_sys.vpi";
+:vpi_module "C:\iverilog\lib\ivl\vhdl_textio.vpi";
+:vpi_module "C:\iverilog\lib\ivl\v2005_math.vpi";
+:vpi_module "C:\iverilog\lib\ivl\va_math.vpi";
+S_000001a02b3aecc0 .scope module, "WB" "WB" 2 1;
+ .timescale 0 0;
+    .port_info 0 /INPUT 1 "clk";
+    .port_info 1 /INPUT 1 "reset";
+    .port_info 2 /INPUT 32 "final_result_in";
+    .port_info 3 /INPUT 1 "regwrite_in";
+    .port_info 4 /INPUT 5 "RD_in";
+    .port_info 5 /INPUT 1 "zero_in";
+    .port_info 6 /OUTPUT 32 "write_data";
+    .port_info 7 /OUTPUT 5 "write_reg";
+    .port_info 8 /OUTPUT 1 "reg_write";
+o000001a02b3f7008 .functor BUFZ 32, C4<zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz>; HiZ drive
+L_000001a02b3adf90 .functor BUFZ 32, o000001a02b3f7008, C4<00000000000000000000000000000000>, C4<00000000000000000000000000000000>, C4<00000000000000000000000000000000>;
+o000001a02b3f6fa8 .functor BUFZ 5, C4<zzzzz>; HiZ drive
+L_000001a02b3c30a0 .functor BUFZ 5, o000001a02b3f6fa8, C4<00000>, C4<00000>, C4<00000>;
+o000001a02b3f7068 .functor BUFZ 1, C4<z>; HiZ drive
+L_000001a02b3ae1e0 .functor BUFZ 1, o000001a02b3f7068, C4<0>, C4<0>, C4<0>;
+v000001a02b3ae140_0 .net "RD_in", 4 0, o000001a02b3f6fa8;  0 drivers
+o000001a02b3f6fd8 .functor BUFZ 1, C4<z>; HiZ drive
+v000001a02b3adef0_0 .net "clk", 0 0, o000001a02b3f6fd8;  0 drivers
+v000001a02b3aee50_0 .net "final_result_in", 31 0, o000001a02b3f7008;  0 drivers
+v000001a02b3aeef0_0 .net "reg_write", 0 0, L_000001a02b3ae1e0;  1 drivers
+v000001a02b3aad70_0 .net "regwrite_in", 0 0, o000001a02b3f7068;  0 drivers
+o000001a02b3f7098 .functor BUFZ 1, C4<z>; HiZ drive
+v000001a02b3aae10_0 .net "reset", 0 0, o000001a02b3f7098;  0 drivers
+v000001a02b3aaeb0_0 .net "write_data", 31 0, L_000001a02b3adf90;  1 drivers
+v000001a02b3aaf50_0 .net "write_reg", 4 0, L_000001a02b3c30a0;  1 drivers
+o000001a02b3f7128 .functor BUFZ 1, C4<z>; HiZ drive
+v000001a02b3aaff0_0 .net "zero_in", 0 0, o000001a02b3f7128;  0 drivers
+# The file index is used to find the file name in the following table.
+:file_names 3;
+    "N/A";
+    "<interactive>";
+    "WB.v";
